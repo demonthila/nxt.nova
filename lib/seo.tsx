@@ -11,9 +11,17 @@ export function pageMeta({ title, description, path }: { title: string; descript
   };
 }
 
+const address = Object.fromEntries(
+  Object.entries({ "@type": "PostalAddress", ...site.address }).filter(([, v]) => v !== ""),
+);
+
+/**
+ * Organization + local business entity. ProfessionalService is a LocalBusiness type, which lets
+ * Google connect the site to the Google Business Profile (Melbourne, Australia).
+ */
 export const orgJsonLd = {
   "@context": "https://schema.org",
-  "@type": "Organization",
+  "@type": ["Organization", "ProfessionalService"],
   "@id": `${site.url}/#organization`,
   name: site.name,
   legalName: site.legalName,
@@ -21,12 +29,33 @@ export const orgJsonLd = {
   email: site.email,
   telephone: site.phone,
   logo: `${site.url}/brand/novalink-logo.png`,
+  image: `${site.url}/brand/novalink-logo.png`,
   slogan: site.tagline,
-  address: [
-    { "@type": "PostalAddress", addressLocality: "Melbourne", addressRegion: "VIC", addressCountry: "AU" },
-    { "@type": "PostalAddress", addressCountry: "LK" },
+  description: site.description,
+  address,
+  areaServed: [
+    { "@type": "City", name: "Melbourne" },
+    { "@type": "Country", name: "Australia" },
   ],
-  sameAs: site.socials.filter((s) => s.label !== "WhatsApp").map((s) => s.href),
+  contactPoint: [
+    { "@type": "ContactPoint", contactType: "sales", telephone: site.phone, email: site.email, areaServed: "AU", availableLanguage: "English" },
+    { "@type": "ContactPoint", contactType: "sales", telephone: site.phoneLk, areaServed: "LK", availableLanguage: "English" },
+  ],
+  knowsAbout: [
+    "Custom software development",
+    "Web development",
+    "UI/UX design",
+    "SaaS development",
+    "Mobile app development",
+    "Digital marketing",
+    "Branding",
+    "Search engine optimisation",
+  ],
+  ...(site.hours ? { openingHours: site.hours } : {}),
+  sameAs: [
+    ...site.socials.filter((s) => s.label !== "WhatsApp").map((s) => s.href),
+    ...(site.clutch.url ? [site.clutch.url] : []),
+  ],
   aggregateRating: {
     "@type": "AggregateRating",
     ratingValue: site.clutch.rating,
@@ -34,6 +63,35 @@ export const orgJsonLd = {
     bestRating: "5",
   },
 };
+
+export const websiteJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "@id": `${site.url}/#website`,
+  name: site.name,
+  url: site.url,
+  publisher: { "@id": `${site.url}/#organization` },
+  inLanguage: "en-AU",
+};
+
+export function faqJsonLd(faqs: { q: string; a: string }[]) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faqs.map((f) => ({
+      "@type": "Question",
+      name: f.q,
+      acceptedAnswer: { "@type": "Answer", text: f.a },
+    })),
+  };
+}
+
+/** Trim to Google's ~155-character snippet length at a word boundary. */
+export function clampDescription(text: string, max = 155) {
+  if (text.length <= max) return text;
+  const cut = text.slice(0, max - 1);
+  return `${cut.slice(0, cut.lastIndexOf(" ")).replace(/[,;:—–-]$/, "")}…`;
+}
 
 export function breadcrumbJsonLd(items: { name: string; path: string }[]) {
   return {

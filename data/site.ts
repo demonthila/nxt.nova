@@ -2,9 +2,9 @@ export const site = {
   name: "NovaLink Innovations",
   legalName: "Novalink Innovations Pvt Ltd",
   url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://novalinkinnovations.com",
-  title: "NovaLink Innovations | Software Development & UI/UX Design, Melbourne",
+  title: "Software Development & UX Design, Australia | NovaLink",
   description:
-    "NovaLink Innovations designs and builds custom software, web applications and digital products for businesses in Australia and around the world.",
+    "Australian software and web development company based in Melbourne, Australia, building custom software, websites and apps for businesses.",
   tagline: "Helping businesses innovate & grow.",
   email: "info@novalinkinnovations.com",
   phone: "+61 450 679 814",
@@ -18,7 +18,16 @@ export const site = {
     { label: "Facebook", href: "https://web.facebook.com/people/Novalink-innovations" },
     { label: "WhatsApp", href: "https://wa.me/94760068914" },
   ],
-  clutch: { rating: "4.9", reviews: 24 },
+  /** Add the Clutch profile URL to link the rating badge (it becomes a trust signal and a backlink). */
+  clutch: { rating: "4.9", reviews: 24, url: "" as string },
+  /**
+   * Local SEO: fill these in to show them on /contact and in the structured data.
+   * Use exactly the same name, address and phone as the Google Business Profile.
+   * Leave streetAddress empty if you serve clients without a public office (service-area business).
+   */
+  address: { streetAddress: "", addressLocality: "Melbourne", addressRegion: "VIC", postalCode: "", addressCountry: "AU" },
+  /** e.g. "Mon–Fri, 9am–5:30pm AEST". Empty = not shown. */
+  hours: "" as string,
 } as const;
 
 export const nav = [

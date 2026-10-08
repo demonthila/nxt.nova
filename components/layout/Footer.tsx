@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useRef } from "react";
 import { site } from "@/data/site";
 import { services } from "@/data/services";
+import { serviceHref } from "@/data/service-pages";
 import { Logo } from "@/components/ui/Logo";
 import { Button } from "@/components/ui/Button";
 import { AnimatedHeading } from "@/components/ui/AnimatedHeading";
@@ -65,7 +66,7 @@ export function Footer() {
         <div className="grid gap-12 pt-16 sm:grid-cols-2 lg:grid-cols-12">
           <div className="lg:col-span-4">
             <Logo tone="light" />
-            <p className="mt-5 max-w-xs text-sm text-ice/70">{site.tagline} Software, digital products and design from Melbourne and Sri Lanka.</p>
+            <p className="mt-5 max-w-xs text-sm text-ice/70">{site.tagline} Software, digital products and design from Melbourne, Australia and Sri Lanka.</p>
           </div>
           <div className="grid grid-cols-2 gap-10 sm:col-span-1 lg:col-span-5 lg:grid-cols-2">
             <Col title="Explore">
@@ -80,7 +81,7 @@ export function Footer() {
             <Col title="Services">
               {services.map((s) => (
                 <li key={s.slug}>
-                  <Link href={`/services#${s.slug}`} className={item}>
+                  <Link href={serviceHref(s.slug)} className={item}>
                     {s.title}
                   </Link>
                 </li>

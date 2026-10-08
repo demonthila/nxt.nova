@@ -10,8 +10,8 @@ export function GlobalPresence() {
           id="global-h"
           label="Global presence"
           size="headline"
-          lines={["From Melbourne", { text: "to the world.", className: "text-blue" }]}
-          intro="Our main hub is in Melbourne, with a team in Sri Lanka and client work across India, Denmark, the UK and Scotland."
+          lines={["From Australia", { text: "to the world.", className: "text-blue" }]}
+          intro="Our main hub is in Melbourne, Australia, with a team in Sri Lanka and client work across India, Denmark, the UK and Scotland."
         />
         <div className="mt-14 md:mt-20">
           <WorldMap />

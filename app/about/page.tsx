@@ -1,5 +1,6 @@
 import { pageMeta, breadcrumbJsonLd, JsonLd } from "@/lib/seo";
 import { services } from "@/data/services";
+import { serviceHref } from "@/data/service-pages";
 import { PageHero } from "@/components/sections/PageHero";
 import { Metrics } from "@/components/sections/Metrics";
 import { CTASection } from "@/components/sections/CTASection";
@@ -11,9 +12,9 @@ import { InfrastructureArt } from "@/components/visuals/InfrastructureArt";
 import { pad } from "@/lib/utils";
 
 export const metadata = pageMeta({
-  title: "About NovaLink — Software & Design Team in Melbourne and Sri Lanka",
+  title: "About Our Australian Software & Design Team",
   description:
-    "NovaLink Innovations is a software development and UX design company working from Melbourne and Sri Lanka, with 75+ projects for 50+ clients in 5 countries.",
+    "NovaLink Innovations is an Australian software and UX design company working from Melbourne, Australia and Sri Lanka: 75+ projects for 50+ clients.",
   path: "/about",
 });
 
@@ -44,7 +45,7 @@ export default function AboutPage() {
                 software, websites and digital products for businesses that want to grow.
               </p>
               <p className="text-lede text-grey-2">
-                Our team works from Melbourne and Sri Lanka, combining user-centred design with engineering, branding and
+                Our team works from Melbourne, Australia and Sri Lanka, combining user-centred design with engineering, branding and
                 digital marketing — so clients get one partner from strategy to launch.
               </p>
             </Reveal>
@@ -112,7 +113,7 @@ export default function AboutPage() {
                 <h3 className="text-title font-medium md:col-span-5">{s.title}</h3>
                 <p className="text-grey-2 md:col-span-4">{s.capabilities.join(" · ")}</p>
                 <div className="md:col-span-2 md:text-right">
-                  <ArrowLink href={`/services#${s.slug}`} className="text-sm text-blue-ink">
+                  <ArrowLink href={serviceHref(s.slug)} className="text-sm text-blue-ink">
                     Details
                   </ArrowLink>
                 </div>

@@ -46,8 +46,8 @@ export function Hero() {
           </h1>
 
           <p {...fade(0.45)} className="css-fade text-lede mt-8 max-w-xl text-grey-2 md:mt-10">
-            NovaLink Innovations partners with ambitious businesses to design and build scalable software, digital
-            products and experiences that create measurable impact.
+            NovaLink Innovations is an Australian software and web development company based in Melbourne, Australia. We partner with ambitious
+            businesses to design and build scalable software, websites and digital products that create measurable impact.
           </p>
           <div {...fade(0.55)} className="css-fade mt-9 flex flex-wrap gap-3">
             <Button href="/contact" size="lg">
@@ -64,7 +64,7 @@ export function Hero() {
       </div>
 
       {/* Capability ticker */}
-      <div {...fade(0.65)} className="css-fade marquee relative overflow-hidden border-t border-line py-5" aria-hidden>
+      <div {...fade(0.65)} className="css-fade marquee relative overflow-hidden border-t border-line py-5" aria-hidden data-nosnippet>
         <div className="marquee-track flex w-max items-center gap-10 [animation-duration:40s]">
           {[...ticker, ...ticker].map((t, i) => (
             <span key={i} className="flex items-center gap-10 text-[clamp(1.75rem,3.4vw,3rem)] leading-none font-medium tracking-[-0.04em]">
@@ -84,7 +84,15 @@ export function Hero() {
           <div className="flex items-center gap-3 py-4 sm:px-6">
             <dt className="text-label text-grey-2">Rated</dt>
             <dd>
-              {site.clutch.rating}/5 on Clutch · {site.clutch.reviews} reviews
+              {site.clutch.url ? (
+                <a href={site.clutch.url} target="_blank" rel="noreferrer" className="link-u">
+                  {site.clutch.rating}/5 on Clutch · {site.clutch.reviews} reviews
+                </a>
+              ) : (
+                <>
+                  {site.clutch.rating}/5 on Clutch · {site.clutch.reviews} reviews
+                </>
+              )}
             </dd>
           </div>
           <div className="flex items-center gap-3 py-4 sm:pl-6">

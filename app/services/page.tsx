@@ -2,6 +2,7 @@ import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
 import { pageMeta, breadcrumbJsonLd, JsonLd } from "@/lib/seo";
 import { services } from "@/data/services";
+import { serviceHref } from "@/data/service-pages";
 import { getProject } from "@/data/projects";
 import { site } from "@/data/site";
 import { PageHero } from "@/components/sections/PageHero";
@@ -11,9 +12,9 @@ import { Reveal } from "@/components/ui/Reveal";
 import { pad } from "@/lib/utils";
 
 export const metadata = pageMeta({
-  title: "Services — Custom Software, Web & UX Design, Marketing, Branding & SEO",
+  title: "Software & Web Development Services Australia",
   description:
-    "Custom software development, web development and UX design, digital marketing, branding and SEO from NovaLink Innovations in Melbourne.",
+    "Custom software development, web development and UX design, digital marketing, branding and SEO from NovaLink Innovations in Melbourne, Australia.",
   path: "/services",
 });
 
@@ -25,7 +26,7 @@ const serviceLd = services.map((s) => ({
   serviceType: s.title,
   provider: { "@id": `${site.url}/#organization` },
   areaServed: ["AU", "Worldwide"],
-  url: `${site.url}/services#${s.slug}`,
+  url: `${site.url}${serviceHref(s.slug)}`,
 }));
 
 export default function ServicesPage() {
@@ -65,8 +66,11 @@ export default function ServicesPage() {
                   {s.title}
                 </h2>
                 <p className="text-lede mt-6 max-w-md text-grey-2">{s.what}</p>
-                <div className="mt-10">
-                  <Button href={`/contact?type=${encodeURIComponent(s.slug)}`}>Discuss your project</Button>
+                <div className="mt-10 flex flex-wrap items-center gap-3">
+                  <Button href={serviceHref(s.slug)}>{`Explore ${s.title}`}</Button>
+                  <Button href={`/contact?type=${encodeURIComponent(s.slug)}`} variant="secondary">
+                    Discuss your project
+                  </Button>
                 </div>
               </div>
             </div>

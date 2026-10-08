@@ -22,7 +22,15 @@ export function LogoMarquee() {
             Trusted by teams building what’s next
           </h2>
           <p className="text-label text-grey-2">
-            <span className="text-blue-ink">{site.clutch.rating}/5</span> · {site.clutch.reviews} Clutch reviews
+            {site.clutch.url ? (
+              <a href={site.clutch.url} target="_blank" rel="noreferrer" className="link-u">
+                <span className="text-blue-ink">{site.clutch.rating}/5</span> · {site.clutch.reviews} Clutch reviews
+              </a>
+            ) : (
+              <>
+                <span className="text-blue-ink">{site.clutch.rating}/5</span> · {site.clutch.reviews} Clutch reviews
+              </>
+            )}
           </p>
         </div>
 

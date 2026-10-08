@@ -4,6 +4,7 @@ import Link from "next/link";
 import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
 import type { Service } from "@/data/services";
+import { serviceHref } from "@/data/service-pages";
 import { cn, EASE } from "@/lib/utils";
 
 /** One row of the editorial services accordion. */
@@ -83,7 +84,7 @@ export function ServiceRow({
                 ))}
               </ul>
               <div className="md:col-span-2 md:text-right">
-                <Link href={`/services#${service.slug}`} className="group/l inline-flex min-h-11 items-center gap-1.5 text-sm font-medium text-blue-ink">
+                <Link href={serviceHref(service.slug)} className="group/l inline-flex min-h-11 items-center gap-1.5 text-sm font-medium text-blue-ink">
                   <span className="link-u">Explore</span>
                   <ArrowUpRight aria-hidden className="size-4 transition-transform group-hover/l:translate-x-0.5 group-hover/l:-translate-y-0.5" />
                 </Link>
