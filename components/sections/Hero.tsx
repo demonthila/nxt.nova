@@ -46,7 +46,7 @@ export function Hero() {
           </h1>
 
           <p {...fade(0.45)} className="css-fade text-lede mt-8 max-w-xl text-grey-2 md:mt-10">
-            NovaLink Innovations is a Melbourne software and web development company. We partner with ambitious
+            NovaLink Innovations is an Australian software and web development company based in Melbourne, Australia. We partner with ambitious
             businesses to design and build scalable software, websites and digital products that create measurable impact.
           </p>
           <div {...fade(0.55)} className="css-fade mt-9 flex flex-wrap gap-3">

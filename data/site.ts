@@ -2,9 +2,9 @@ export const site = {
   name: "NovaLink Innovations",
   legalName: "Novalink Innovations Pvt Ltd",
   url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://novalinkinnovations.com",
-  title: "Software Development & UX Design, Melbourne | NovaLink",
+  title: "Software Development & UX Design, Australia | NovaLink",
   description:
-    "Melbourne software and web development company. We design and build custom software, websites and apps for businesses in Australia and worldwide.",
+    "Australian software and web development company based in Melbourne, Australia, building custom software, websites and apps for businesses.",
   tagline: "Helping businesses innovate & grow.",
   email: "info@novalinkinnovations.com",
   phone: "+61 450 679 814",

@@ -28,7 +28,7 @@ export async function generateMetadata(props: PageProps<"/projects/[slug]">): Pr
   if (!p) return {};
   return pageMeta({
     title: `${p.title} — Case Study`,
-    description: clampDescription(`${p.problem} ${p.services.join(", ")} by NovaLink Innovations, Melbourne.`),
+    description: clampDescription(`${p.problem} ${p.services.join(", ")} by NovaLink Innovations, Melbourne, Australia.`),
     path: `/projects/${p.slug}`,
   });
 }

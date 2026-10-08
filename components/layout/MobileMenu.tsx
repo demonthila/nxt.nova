@@ -75,7 +75,7 @@ export function MobileMenu({ open, onClose }: { open: boolean; onClose: () => vo
             <a href={site.phoneHref} className="min-h-11 py-2">
               {site.phone}
             </a>
-            <p>Melbourne · Sri Lanka</p>
+            <p>Melbourne, Australia · Sri Lanka</p>
           </div>
         </motion.div>
       )}

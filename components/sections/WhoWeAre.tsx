@@ -43,7 +43,7 @@ export function WhoWeAre() {
           <div className="flex flex-col justify-between gap-12 lg:col-span-6 lg:col-start-7">
             <Reveal>
               <p className="text-title font-medium">
-                NovaLink is a software and design team working from Melbourne and Sri Lanka. We combine user-centred
+                NovaLink is a software and design team working from Melbourne, Australia and Sri Lanka. We combine user-centred
                 design with solid engineering to build products that create real value for our clients.
               </p>
             </Reveal>

@@ -12,9 +12,9 @@ import { InfrastructureArt } from "@/components/visuals/InfrastructureArt";
 import { pad } from "@/lib/utils";
 
 export const metadata = pageMeta({
-  title: "About Our Melbourne Software & Design Team",
+  title: "About Our Australian Software & Design Team",
   description:
-    "NovaLink Innovations is a software development and UX design company working from Melbourne and Sri Lanka, with 75+ projects for 50+ clients in 5 countries.",
+    "NovaLink Innovations is an Australian software and UX design company working from Melbourne, Australia and Sri Lanka: 75+ projects for 50+ clients.",
   path: "/about",
 });
 
@@ -45,7 +45,7 @@ export default function AboutPage() {
                 software, websites and digital products for businesses that want to grow.
               </p>
               <p className="text-lede text-grey-2">
-                Our team works from Melbourne and Sri Lanka, combining user-centred design with engineering, branding and
+                Our team works from Melbourne, Australia and Sri Lanka, combining user-centred design with engineering, branding and
                 digital marketing — so clients get one partner from strategy to launch.
               </p>
             </Reveal>

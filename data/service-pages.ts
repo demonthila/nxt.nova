@@ -1,6 +1,6 @@
 /**
  * Long-form content for the dedicated service pages (/services/<path>).
- * Each page targets one Melbourne search (see `keyword`). Facts used here come from the rest of the site:
+ * Each page targets one Australian search (see `keyword`). Facts used here come from the rest of the site:
  * Melbourne main hub + Colombo team, 75+ projects, 50+ clients, 7+ years, the tech list and the budget bands
  * on the contact form. Keep answers factual; add real timelines or prices only once NovaLink confirms them.
  */
@@ -28,19 +28,19 @@ export type ServicePage = {
 };
 
 const team =
-  "Projects are led from our Melbourne hub, with design and engineering by our team in Colombo, Sri Lanka. You get a local point of contact and one team from first workshop to launch.";
+  "Projects are led from our hub in Melbourne, Australia, with design and engineering by our team in Colombo, Sri Lanka. You get a local point of contact and one team from first workshop to launch.";
 
 export const servicePages: ServicePage[] = [
   {
     slug: "custom-software",
     path: "custom-software-development",
-    keyword: "custom software development Melbourne",
-    seoTitle: "Custom Software Development Melbourne",
+    keyword: "custom software development Australia",
+    seoTitle: "Custom Software Development Australia",
     metaDescription:
-      "Custom software development in Melbourne: web applications, enterprise systems, SaaS platforms and integrations, built around how your business works.",
-    h1: ["Custom software development", "in Melbourne."],
+      "Custom software development in Australia: web applications, enterprise systems, SaaS platforms and integrations, built around how your business works.",
+    h1: ["Custom software development", "in Australia."],
     intro:
-      "We design and build web applications, business systems and SaaS platforms for Melbourne and Australian businesses that have outgrown spreadsheets and off-the-shelf tools.",
+      "We design and build web applications, business systems and SaaS platforms for Australian businesses that have outgrown spreadsheets and off-the-shelf tools.",
     overview: [
       "Custom software is worth it when the way you work is part of your advantage. Instead of bending your process to fit a generic product, we build the system around your process: the screens your team needs, the rules your business follows and the reports you actually read.",
       "NovaLink has delivered 75+ projects for 50+ clients over seven years, including HR and payroll platforms, inventory systems and SaaS products. We start with business analysis, so the first thing you get is clarity on what to build and why, before a line of code is written.",
@@ -74,7 +74,7 @@ export const servicePages: ServicePage[] = [
       "Business analysis first, so you pay to build the right thing",
       "Proven in HR, payroll, inventory and SaaS platforms",
       "Modern stack: React, Next.js, TypeScript, Node.js, PHP, Python, PostgreSQL, MySQL, AWS and Azure",
-      "Melbourne-led projects with an experienced offshore engineering team",
+      "Projects led from Melbourne, Australia, with an experienced offshore engineering team",
     ],
     faqs: [
       {
@@ -82,8 +82,8 @@ export const servicePages: ServicePage[] = [
         a: "Every project is quoted on its scope. Projects we take on range from under $10k for a focused tool to $100k+ for larger platforms. After a consultation we give you a written quote and a clear plan.",
       },
       {
-        q: "Do you only work with Melbourne businesses?",
-        a: "No. Melbourne is our main hub and we work with businesses across Australia, plus clients in India, Denmark and the UK.",
+        q: "Do you only work with businesses in Melbourne, Australia?",
+        a: "No. Melbourne, Australia is our main hub and we work with businesses across Australia, plus clients in India, Denmark and the UK.",
       },
       {
         q: "Who owns the software you build?",
@@ -102,13 +102,13 @@ export const servicePages: ServicePage[] = [
   {
     slug: "web-development",
     path: "web-development-ux-design",
-    keyword: "web developer Melbourne",
-    seoTitle: "Web Development & UX Design Melbourne",
+    keyword: "web developer Australia",
+    seoTitle: "Web Development & UX Design Australia",
     metaDescription:
-      "Melbourne web development and UX design: fast, responsive websites and web apps, designed and built by one team. Talk to NovaLink about your project.",
-    h1: ["Web development & UX design", "in Melbourne."],
+      "Australian web development and UX design: fast, responsive websites and web apps, designed and built by one team. Talk to NovaLink about your project.",
+    h1: ["Web development & UX design", "in Australia."],
     intro:
-      "We design and build modern websites and web applications for Melbourne businesses: fast, responsive and easy to use from the first visit.",
+      "We design and build modern websites and web applications for Australian businesses: fast, responsive and easy to use from the first visit.",
     overview: [
       "Your website is often the first conversation a customer has with your business. If it is slow, dated or confusing, people leave before they ever contact you. We build websites that load fast, read clearly on a phone and lead visitors to the next step.",
       "Design and development sit in one team. The people who research your users and design the interface work alongside the developers who build it, so what is designed is what ships, without things getting lost in hand-over.",
@@ -170,13 +170,13 @@ export const servicePages: ServicePage[] = [
   {
     slug: "digital-marketing",
     path: "digital-marketing",
-    keyword: "digital marketing Melbourne",
-    seoTitle: "Digital Marketing Services Melbourne",
+    keyword: "digital marketing Australia",
+    seoTitle: "Digital Marketing Services Australia",
     metaDescription:
-      "Digital marketing for Melbourne businesses: social media, paid advertising, content and email campaigns tied to goals you can measure.",
-    h1: ["Digital marketing", "for Melbourne businesses."],
+      "Digital marketing for Australian businesses: social media, paid advertising, content and email campaigns tied to goals you can measure.",
+    h1: ["Digital marketing", "for Australian businesses."],
     intro:
-      "We plan and run social media, paid advertising, content and email campaigns for Melbourne businesses, tied to goals you can measure.",
+      "We plan and run social media, paid advertising, content and email campaigns for Australian businesses, tied to goals you can measure.",
     overview: [
       "Good marketing starts with a clear goal: more enquiries, more bookings, more sales. We agree that goal first, choose the channels most likely to reach your customers, and report on the numbers that show whether it is working.",
       "Because we also design and build websites, we look at the whole journey: the ad or post that gets attention, the page people land on and the form or call that turns them into a customer. Fixing a weak landing page is often worth more than spending more on ads.",
@@ -206,7 +206,7 @@ export const servicePages: ServicePage[] = [
       "Goals and tracking agreed before money is spent",
       "Marketing and website work in one team, so landing pages get fixed too",
       "Content that matches your brand across every channel",
-      "Melbourne-led, with clients across Australia and overseas",
+      "Led from Melbourne, Australia, with clients across Australia and overseas",
     ],
     faqs: [
       {
@@ -230,16 +230,16 @@ export const servicePages: ServicePage[] = [
   {
     slug: "branding-seo",
     path: "branding-seo",
-    keyword: "branding and SEO agency Melbourne",
-    seoTitle: "Branding & SEO Services Melbourne",
+    keyword: "branding and SEO agency Australia",
+    seoTitle: "Branding & SEO Services Australia",
     metaDescription:
-      "Branding and SEO in Melbourne: brand identity, logo design, content strategy and search optimisation that help your business look capable and get found.",
-    h1: ["Branding & SEO", "in Melbourne."],
+      "Branding and SEO in Australia: brand identity, logo design, content strategy and search optimisation that help your business look capable and get found.",
+    h1: ["Branding & SEO", "in Australia."],
     intro:
-      "We create brand identities and improve search visibility for Melbourne businesses, so you look as capable as you are and customers can find you.",
+      "We create brand identities and improve search visibility for Australian businesses, so you look as capable as you are and customers can find you.",
     overview: [
       "A strong brand makes a small business look established, and good SEO puts it in front of people who are already searching for what you offer. We treat them together: the brand sets how you look and sound, and SEO makes sure the right people see it.",
-      "Our SEO work covers the technical foundations (site speed, structure, structured data and indexing), local search for Melbourne customers, and content that answers the questions your customers ask before they buy.",
+      "Our SEO work covers the technical foundations (site speed, structure, structured data and indexing), local search for customers in Melbourne, Australia and beyond, and content that answers the questions your customers ask before they buy.",
       team,
     ],
     capabilityDetails: {
@@ -265,7 +265,7 @@ export const servicePages: ServicePage[] = [
     why: [
       "Brand and SEO planned together, so you look good and get found",
       "Technical SEO done by the same team that builds websites",
-      "Local SEO for Melbourne searches, including Google Business Profile",
+      "Local SEO for Australian searches, including Google Business Profile",
       "Clear reporting on rankings and enquiries",
     ],
     faqs: [
@@ -274,8 +274,8 @@ export const servicePages: ServicePage[] = [
         a: "Technical fixes can be picked up as soon as Google re-crawls your site, while rankings for competitive searches build over months. We report progress along the way.",
       },
       {
-        q: "Do you do local SEO for Melbourne?",
-        a: "Yes. We set up and optimise your Google Business Profile, local structured data and Melbourne-focused pages.",
+        q: "Do you do local SEO for Australian businesses?",
+        a: "Yes. We set up and optimise your Google Business Profile, local structured data and location-focused pages.",
       },
       {
         q: "Can you refresh our existing brand rather than start again?",

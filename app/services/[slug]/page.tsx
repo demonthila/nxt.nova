@@ -49,7 +49,7 @@ export default async function ServicePage(props: PageProps<"/services/[slug]">) 
             "@context": "https://schema.org",
             "@type": "Service",
             "@id": `${url}#service`,
-            name: `${service.title} in Melbourne`,
+            name: `${service.title} in Australia`,
             serviceType: service.title,
             description: page.metaDescription,
             provider: { "@id": `${site.url}/#organization` },
@@ -164,7 +164,7 @@ export default async function ServicePage(props: PageProps<"/services/[slug]">) 
           <div className="lg:col-span-6">
             <EyebrowLabel index="05">Why NovaLink</EyebrowLabel>
             <h2 id="why-h" className="text-headline mt-6 font-medium">
-              Why Melbourne businesses choose us
+              Why Australian businesses choose us
             </h2>
             <ul className="mt-8 space-y-4">
               {page.why.map((w) => (

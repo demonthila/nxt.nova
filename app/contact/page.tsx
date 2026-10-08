@@ -7,7 +7,7 @@ import { ContactForm } from "@/components/sections/ContactForm";
 
 export const metadata = pageMeta({
   title: "Contact — Start a Software or Design Project",
-  description: "Start a project with NovaLink Innovations. Email info@novalinkinnovations.com or call +61 450 679 814 (Melbourne).",
+  description: "Start a project with NovaLink Innovations. Email info@novalinkinnovations.com or call +61 450 679 814 (Melbourne, Australia).",
   path: "/contact",
 });
 

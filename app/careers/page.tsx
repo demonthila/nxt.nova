@@ -6,8 +6,8 @@ import { ApplicationForm } from "@/components/sections/ApplicationForm";
 import { SectionHeader } from "@/components/ui/SectionHeader";
 
 export const metadata = pageMeta({
-  title: "Careers — Join NovaLink in Melbourne & Sri Lanka",
-  description: "Open roles at NovaLink Innovations: design, development, marketing and project management in Melbourne, Sri Lanka and remote.",
+  title: "Careers — Join NovaLink in Australia & Sri Lanka",
+  description: "Open roles at NovaLink Innovations: design, development, marketing and project management in Melbourne (Australia), Sri Lanka and remote.",
   path: "/careers",
 });
 
@@ -19,7 +19,7 @@ export default function CareersPage() {
         crumb="Careers"
         label="Careers"
         lines={["Make an impact through", { text: "design & development.", className: "text-blue" }]}
-        intro="Join a team helping businesses innovate and grow, working across Melbourne and Sri Lanka."
+        intro="Join a team helping businesses innovate and grow, working across Melbourne, Australia and Sri Lanka."
       />
 
       <section aria-labelledby="roles-h" className="section-y">

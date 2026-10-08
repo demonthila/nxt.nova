@@ -66,7 +66,7 @@ export function Footer() {
         <div className="grid gap-12 pt-16 sm:grid-cols-2 lg:grid-cols-12">
           <div className="lg:col-span-4">
             <Logo tone="light" />
-            <p className="mt-5 max-w-xs text-sm text-ice/70">{site.tagline} Software, digital products and design from Melbourne and Sri Lanka.</p>
+            <p className="mt-5 max-w-xs text-sm text-ice/70">{site.tagline} Software, digital products and design from Melbourne, Australia and Sri Lanka.</p>
           </div>
           <div className="grid grid-cols-2 gap-10 sm:col-span-1 lg:col-span-5 lg:grid-cols-2">
             <Col title="Explore">

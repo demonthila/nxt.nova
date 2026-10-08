@@ -17,7 +17,7 @@ const address = Object.fromEntries(
 
 /**
  * Organization + local business entity. ProfessionalService is a LocalBusiness type, which lets
- * Google connect the site to the Melbourne Google Business Profile.
+ * Google connect the site to the Google Business Profile (Melbourne, Australia).
  */
 export const orgJsonLd = {
   "@context": "https://schema.org",

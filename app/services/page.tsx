@@ -12,9 +12,9 @@ import { Reveal } from "@/components/ui/Reveal";
 import { pad } from "@/lib/utils";
 
 export const metadata = pageMeta({
-  title: "Software & Web Development Services Melbourne",
+  title: "Software & Web Development Services Australia",
   description:
-    "Custom software development, web development and UX design, digital marketing, branding and SEO from NovaLink Innovations in Melbourne.",
+    "Custom software development, web development and UX design, digital marketing, branding and SEO from NovaLink Innovations in Melbourne, Australia.",
   path: "/services",
 });
 
