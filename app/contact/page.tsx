@@ -28,6 +28,13 @@ export default async function ContactPage(props: PageProps<"/contact">) {
     { k: "Sri Lanka", v: site.phoneLk, href: site.phoneLkHref },
     { k: "WhatsApp", v: "Message us", href: site.socials.find((s) => s.label === "WhatsApp")!.href },
   ];
+  // Local SEO: shown once filled in data/site.ts (must match the Google Business Profile exactly).
+  const a = site.address;
+  const addressLine = [a.streetAddress, `${a.addressLocality} ${a.addressRegion} ${a.postalCode}`.trim()].filter(Boolean).join(", ");
+  const extra = [
+    ...(a.streetAddress ? [{ k: "Office", v: addressLine }] : []),
+    ...(site.hours ? [{ k: "Hours", v: site.hours }] : []),
+  ];
 
   return (
     <>
@@ -59,6 +66,12 @@ export default async function ContactPage(props: PageProps<"/contact">) {
                       {d.v}
                     </a>
                   </dd>
+                </div>
+              ))}
+              {extra.map((d) => (
+                <div key={d.k} className="grid grid-cols-[7.5rem_1fr] items-center border-b border-line py-4">
+                  <dt className="text-label text-grey-2">{d.k}</dt>
+                  <dd className="py-2.5">{d.v}</dd>
                 </div>
               ))}
               <div className="grid grid-cols-[7.5rem_1fr] items-center border-b border-line py-4">

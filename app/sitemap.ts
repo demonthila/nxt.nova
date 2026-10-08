@@ -1,6 +1,7 @@
 import type { MetadataRoute } from "next";
 import { site } from "@/data/site";
 import { projects } from "@/data/projects";
+import { servicePages } from "@/data/service-pages";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date();
@@ -16,5 +17,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
     changeFrequency: "yearly" as const,
     priority: 0.6,
   }));
-  return [...pages, ...work];
+  const servicesPages = servicePages.map((p) => ({
+    url: `${site.url}/services/${p.path}`,
+    lastModified: now,
+    changeFrequency: "monthly" as const,
+    priority: 0.9,
+  }));
+  return [...pages, ...servicesPages, ...work];
 }

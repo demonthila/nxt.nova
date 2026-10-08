@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useRef } from "react";
 import { site } from "@/data/site";
 import { services } from "@/data/services";
+import { serviceHref } from "@/data/service-pages";
 import { Logo } from "@/components/ui/Logo";
 import { Button } from "@/components/ui/Button";
 import { AnimatedHeading } from "@/components/ui/AnimatedHeading";
@@ -80,7 +81,7 @@ export function Footer() {
             <Col title="Services">
               {services.map((s) => (
                 <li key={s.slug}>
-                  <Link href={`/services#${s.slug}`} className={item}>
+                  <Link href={serviceHref(s.slug)} className={item}>
                     {s.title}
                   </Link>
                 </li>

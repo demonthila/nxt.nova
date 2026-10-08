@@ -6,7 +6,10 @@ import { ArrowLeft, ArrowRight } from "lucide-react";
 import { getProject, projectNumber, projects } from "@/data/projects";
 import { site } from "@/data/site";
 import { processSteps } from "@/data/process";
-import { pageMeta, breadcrumbJsonLd, JsonLd } from "@/lib/seo";
+import { pageMeta, breadcrumbJsonLd, clampDescription, JsonLd } from "@/lib/seo";
+import { services } from "@/data/services";
+import { serviceHref } from "@/data/service-pages";
+import { ArrowLink } from "@/components/ui/ArrowLink";
 import { AnimatedHeading } from "@/components/ui/AnimatedHeading";
 import { EyebrowLabel } from "@/components/ui/EyebrowLabel";
 import { ImageReveal } from "@/components/ui/ImageReveal";
@@ -25,7 +28,7 @@ export async function generateMetadata(props: PageProps<"/projects/[slug]">): Pr
   if (!p) return {};
   return pageMeta({
     title: `${p.title} — Case Study`,
-    description: `${p.problem} ${p.services.join(", ")} by NovaLink Innovations.`,
+    description: clampDescription(`${p.problem} ${p.services.join(", ")} by NovaLink Innovations, Melbourne.`),
     path: `/projects/${p.slug}`,
   });
 }
@@ -35,6 +38,7 @@ export default async function ProjectPage(props: PageProps<"/projects/[slug]">) 
   const project = getProject(slug);
   if (!project) notFound();
 
+  const usedServices = services.filter((s) => s.related.includes(project.slug));
   const idx = projects.findIndex((p) => p.slug === slug);
   const next = projects[(idx + 1) % projects.length];
   const meta = [
@@ -105,6 +109,25 @@ export default async function ProjectPage(props: PageProps<"/projects/[slug]">) 
             </div>
           </section>
         ))}
+
+        {usedServices.length > 0 && (
+          <section aria-label="Services used" className="border-b border-line py-14 md:py-20">
+            <div className="container-x grid gap-8 md:grid-cols-12">
+              <div className="md:col-span-4">
+                <EyebrowLabel as="h2">Services used</EyebrowLabel>
+              </div>
+              <ul className="flex flex-wrap gap-x-8 gap-y-3 md:col-span-8">
+                {usedServices.map((s) => (
+                  <li key={s.slug}>
+                    <ArrowLink href={serviceHref(s.slug)} className="text-title font-medium text-blue-ink">
+                      {s.title}
+                    </ArrowLink>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </section>
+        )}
 
         <section aria-label="Design process" className="border-b border-line bg-white py-20 md:py-28">
           <div className="container-x grid gap-8 md:grid-cols-12">

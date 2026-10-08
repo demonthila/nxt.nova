@@ -34,14 +34,18 @@ export function AnimatedHeading({
       const text = typeof line === "string" ? line : line.text;
       const cls = typeof line === "string" ? undefined : line.className;
       return (
-        <span key={li} className="block">
+        <Fragment key={li}>
+          {/* A real space between lines, so crawlers read "from strategy", not "fromstrategy". */}
+          {li > 0 && " "}
+          <span className="block">
           {text.split(" ").map((word, wi, arr) => (
             <Fragment key={wi}>
               <span className="-mb-[0.1em] inline-block overflow-hidden pb-[0.1em] align-bottom">{render(word, w++, cls)}</span>
               {wi < arr.length - 1 && " "}
             </Fragment>
           ))}
-        </span>
+          </span>
+        </Fragment>
       );
     });
 

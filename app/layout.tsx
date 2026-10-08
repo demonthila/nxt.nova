@@ -2,7 +2,8 @@ import type { Metadata, Viewport } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { site } from "@/data/site";
-import { JsonLd, orgJsonLd } from "@/lib/seo";
+import { JsonLd, orgJsonLd, websiteJsonLd } from "@/lib/seo";
+import { Analytics } from "@/components/Analytics";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { ScrollProgress } from "@/components/ui/ScrollProgress";
@@ -12,7 +13,7 @@ const geistMono = Geist_Mono({ variable: "--font-geist-mono", subsets: ["latin"]
 
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
-  title: { default: site.title, template: "%s | NovaLink Innovations" },
+  title: { default: site.title, template: "%s | NovaLink" },
   description: site.description,
   applicationName: site.name,
   alternates: { canonical: "/" },
@@ -37,7 +38,8 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html lang="en-AU" className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
       <body>
-        <JsonLd data={orgJsonLd} />
+        <JsonLd data={[orgJsonLd, websiteJsonLd]} />
+        <Analytics />
         <ScrollProgress />
         <Navbar />
         <main id="main">{children}</main>
