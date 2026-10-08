@@ -2,7 +2,7 @@
  * NovaLink projects.
  *
  * Titles/services for the original six come from novalinkinnovations.com; the
- * others (DelaXchange, Active Care, Money Transfer App, Bravio, Active) were
+ * others (Active Care, Money Transfer App, Bravio, Active) were
  * identified from NovaLink's supplied project imagery. Problem/solution lines
  * describe what the screens show — confirm with each client and add specifics.
  * Years, results and stacks were not supplied, so they stay empty and hidden.
@@ -54,26 +54,6 @@ export const projects: Project[] = [
     gallery: [
       shot("iom-hr-system", "mobile-login", "HRPro AI mobile app sign-in and welcome screens on two phones"),
       shot("iom-hr-system", "mobile-home", "HRPro AI mobile home screen with leave and request summaries"),
-    ],
-  },
-  {
-    slug: "delaxchange",
-    title: "DelaXchange",
-    client: "Dela",
-    location: "Australia",
-    services: ["Product Design", "UI/UX Design", "Web Application"],
-    problem: "Make buying and selling online safer by holding payments and goods until both sides are satisfied.",
-    solution:
-      "A secure-transaction marketplace with buyer and seller dashboards, order tracking, delivery performance metrics and a trusted sign-in flow — designed around peace of mind for both parties.",
-    tech: [],
-    year: null,
-    featured: true,
-    image: shot("delaxchange", "landing", "DelaXchange landing page on a laptop: “Ditch the stress. Buy smarter. Sell safer.”"),
-    gallery: [
-      shot("delaxchange", "seller-dashboard", "DelaXchange seller dashboard with on-time delivery, late shipment and revenue metrics"),
-      shot("delaxchange", "order-tracking", "DelaXchange order tracking and return flow"),
-      shot("delaxchange", "login", "DelaXchange sign-in screen: “Secure & trusted transactions”"),
-      shot("delaxchange", "mobile", "DelaXchange mobile screens"),
     ],
   },
   {
