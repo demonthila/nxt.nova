@@ -9,13 +9,6 @@ export const testimonials = [
   },
   {
     quote:
-      "Novalink Innovations was a valuable technology partner. They consistently delivered high-quality work and were easy to collaborate with.",
-    name: "Megan van der Velde",
-    role: "Founder",
-    company: "Dela (Australia)",
-  },
-  {
-    quote:
       "Novalink is a skilled technology team combining UI/UX design and development to deliver scalable, user-focused solutions.",
     name: "Varatharaja Kajamugan",
     role: "Head of Software Department",

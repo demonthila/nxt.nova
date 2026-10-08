@@ -49,10 +49,9 @@ export const metrics = [
   { value: 5, suffix: "×", label: "Tech partnerships", note: "Strategic collaborations" },
 ] as const;
 
-/** Client logos supplied by NovaLink (trimmed; Dela's wordmark recoloured for light backgrounds). */
+/** Client logos supplied by NovaLink (trimmed). */
 export const clients: { name: string; logo: string; width: number; height: number; scale?: number }[] = [
   { name: "IOM World", logo: "/clients/iom-world.png", width: 504, height: 288, scale: 1.35 },
-  { name: "Dela", logo: "/clients/dela.png", width: 640, height: 257 },
   { name: "LK Domain Registry", logo: "/clients/lk-domain-registry.png", width: 646, height: 117 },
   { name: "Foxmindz", logo: "/clients/foxmindz.png", width: 800, height: 175 },
   { name: "Drogo Creative", logo: "/clients/drogo-creative.png", width: 369, height: 63 },
