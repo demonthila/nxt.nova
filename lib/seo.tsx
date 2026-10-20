@@ -50,6 +50,8 @@ export const orgJsonLd = {
     "Digital marketing",
     "Branding",
     "Search engine optimisation",
+    "IT support",
+    "Managed IT services",
   ],
   ...(site.hours ? { openingHours: site.hours } : {}),
   sameAs: [

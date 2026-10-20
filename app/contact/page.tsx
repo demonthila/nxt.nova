@@ -16,6 +16,7 @@ const fromSlug: Record<string, (typeof projectTypes)[number]> = {
   "web-development": "Website",
   "digital-marketing": "Digital Marketing",
   "branding-seo": "Branding / SEO",
+  "it-support": "IT Support",
 };
 
 export default async function ContactPage(props: PageProps<"/contact">) {

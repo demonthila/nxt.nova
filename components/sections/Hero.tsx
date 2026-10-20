@@ -15,6 +15,7 @@ const ticker = [
   "Branding",
   "SEO",
   "Digital Marketing",
+  "IT Support",
 ];
 
 export function Hero() {

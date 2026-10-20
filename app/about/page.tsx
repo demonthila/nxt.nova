@@ -45,8 +45,8 @@ export default function AboutPage() {
                 software, websites and digital products for businesses that want to grow.
               </p>
               <p className="text-lede text-grey-2">
-                Our team works from Melbourne, Australia and Sri Lanka, combining user-centred design with engineering, branding and
-                digital marketing — so clients get one partner from strategy to launch.
+                Our team works from Melbourne, Australia and Sri Lanka, combining user-centred design with engineering, branding,
+                digital marketing and IT support — so clients get one partner from strategy to launch.
               </p>
             </Reveal>
           </div>
@@ -105,7 +105,7 @@ export default function AboutPage() {
 
       <section aria-labelledby="cap-h" className="section-y">
         <div className="container-x">
-          <SectionHeader id="cap-h" index="05" label="Capabilities" size="headline" lines={["One team, four disciplines."]} />
+          <SectionHeader id="cap-h" index="05" label="Capabilities" size="headline" lines={["One team, five disciplines."]} />
           <ul className="mt-14 border-t border-line">
             {services.map((s) => (
               <li key={s.slug} className="grid gap-4 border-b border-line py-7 md:grid-cols-12 md:items-center">

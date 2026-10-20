@@ -287,6 +287,74 @@ export const servicePages: ServicePage[] = [
       },
     ],
   },
+  {
+    slug: "it-support",
+    path: "it-support",
+    keyword: "IT support Melbourne",
+    seoTitle: "IT Support Services Melbourne, Australia",
+    metaDescription:
+      "IT support for Australian businesses: helpdesk and remote support, device and network management, Microsoft 365, security and backup, led from Melbourne.",
+    h1: ["IT support", "for Australian businesses."],
+    intro:
+      "We look after the computers, accounts, networks and cloud tools your team relies on, so problems get fixed quickly and your business keeps moving.",
+    overview: [
+      "When IT stops working, so does your team. Locked accounts, slow laptops, email problems and unreliable Wi-Fi cost hours every week. We give you a dependable support team to call, and we put the right foundations in place so the same problems stop coming back.",
+      "Because NovaLink also builds custom software and websites, we understand the whole picture: the devices your staff use, the cloud tools they log in to, and the business systems that run on top. You get one partner who can support all of it, instead of a separate supplier for every piece.",
+      "Support is led from our hub in Melbourne, Australia, with technical support from our team in Colombo, Sri Lanka. You get a local point of contact and one team that knows how your systems are set up.",
+    ],
+    capabilityDetails: {
+      "Helpdesk & Remote Support":
+        "A single point of contact for your team’s IT questions and issues, from password resets and email problems to software that will not behave, resolved remotely wherever possible.",
+      "Device & Network Management":
+        "Setting up and maintaining laptops, desktops, printers and Wi-Fi, keeping software and operating systems up to date, and getting new starters ready on day one.",
+      "Cloud & Microsoft 365":
+        "Setup and administration of Microsoft 365 and Google Workspace: email, accounts, licences, file sharing and migrations from older systems.",
+      "Security & Backup":
+        "Multi-factor authentication, access controls, device protection and backups of your important data, so a lost laptop or a phishing email does not become a crisis.",
+    },
+    problemDetails: {
+      "IT problems that stop your team working":
+        "Instead of staff losing time to the same issues, they have someone to contact who fixes the problem and, where possible, its cause.",
+      "Nobody clearly responsible for your systems":
+        "In many small businesses, IT falls to whoever is most confident with computers. We take that responsibility on and document how your systems are set up.",
+      "Data that isn’t secured or backed up":
+        "We review where your data lives, who can access it and how it is backed up, then close the gaps before they cause a problem.",
+    },
+    processDetails: {
+      "IT health check": "We review your devices, accounts, network, security and backups, and agree the priorities with you.",
+      "Support plan": "We recommend a support arrangement that fits your team’s size, needs and budget.",
+      "Setup & onboarding": "We fix urgent issues, put the right foundations in place and document your setup.",
+      "Ongoing support": "Your team contacts us when they need help, and we keep systems updated, secure and backed up.",
+    },
+    why: [
+      "One partner for IT support, software and websites",
+      "Practical advice in plain English, without jargon",
+      "Security and backup treated as essentials, not extras",
+      "Led from Melbourne, Australia, with support from our team in Sri Lanka",
+    ],
+    faqs: [
+      {
+        q: "How much does IT support cost?",
+        a: "It depends on the number of people and devices you have and the level of support you need. After an IT health check we recommend a plan and send a written quote.",
+      },
+      {
+        q: "Do you provide remote IT support?",
+        a: "Yes. Most issues can be resolved remotely and securely, which is usually the fastest way to get your team working again.",
+      },
+      {
+        q: "Can you support Microsoft 365 and Google Workspace?",
+        a: "Yes. We set up and manage email, user accounts, licences and file sharing, and can migrate you from older email or file systems.",
+      },
+      {
+        q: "We are a small business. Is IT support worth it for us?",
+        a: "Often it matters more for a small team, because one person’s IT problem can hold up the whole business. We tailor support to the size of your team.",
+      },
+      {
+        q: "Can you also support the software and website you build for us?",
+        a: "Yes. Because we build and support systems in the same team, ongoing support for your software and website can sit alongside your everyday IT support.",
+      },
+    ],
+  },
 ];
 
 export const getServicePage = (slugOrPath: string) =>

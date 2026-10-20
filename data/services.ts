@@ -11,7 +11,7 @@ export type Service = {
   related: string[];
 };
 
-/** NovaLink's four service lines, as offered on novalinkinnovations.com. */
+/** NovaLink's service lines. The first four are as offered on novalinkinnovations.com; IT Support was added in October 2026. */
 export const services: Service[] = [
   {
     slug: "custom-software",
@@ -72,6 +72,21 @@ export const services: Service[] = [
     ],
     process: ["Brand strategy", "Identity design", "Technical SEO", "Content strategy"],
     related: ["iom-hr-system", "learn-website-uk", "news-marketing-agency"],
+  },
+  {
+    slug: "it-support",
+    number: "05",
+    title: "IT Support",
+    summary: "Reliable, responsive IT support that keeps your team, devices and systems running.",
+    capabilities: ["Helpdesk & Remote Support", "Device & Network Management", "Cloud & Microsoft 365", "Security & Backup"],
+    what: "Day-to-day IT support and system care from the same team that builds software, so you have one partner for the technology your business runs on.",
+    problems: [
+      "IT problems that stop your team working",
+      "Nobody clearly responsible for your systems",
+      "Data that isn’t secured or backed up",
+    ],
+    process: ["IT health check", "Support plan", "Setup & onboarding", "Ongoing support"],
+    related: [],
   },
 ];
 

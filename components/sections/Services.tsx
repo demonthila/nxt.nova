@@ -16,7 +16,7 @@ export function Services() {
           index="02"
           label="Capabilities"
           lines={["From idea", { text: "to impact.", className: "text-blue" }]}
-          intro="Four disciplines, one team. Strategy, design and engineering stay connected from the first conversation to launch."
+          intro="Five disciplines, one team. Strategy, design and engineering stay connected from the first conversation to launch."
         />
         <Stagger as="ul" gap={0.08} className="mt-14 border-t border-line md:mt-20">
           {services.map((s) => (

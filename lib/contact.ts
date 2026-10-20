@@ -1,4 +1,4 @@
-export const projectTypes = ["Custom Software", "Website", "UI/UX Design", "Digital Marketing", "Branding / SEO", "Other"] as const;
+export const projectTypes = ["Custom Software", "Website", "UI/UX Design", "Digital Marketing", "Branding / SEO", "IT Support", "Other"] as const;
 export const budgets = ["Under $10k", "$10k – $25k", "$25k – $50k", "$50k – $100k", "$100k+", "Not sure yet"] as const;
 
 export type Enquiry = {

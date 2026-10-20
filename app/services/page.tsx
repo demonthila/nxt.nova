@@ -14,7 +14,7 @@ import { pad } from "@/lib/utils";
 export const metadata = pageMeta({
   title: "Software & Web Development Services Australia",
   description:
-    "Custom software development, web development and UX design, digital marketing, branding and SEO from NovaLink Innovations in Melbourne, Australia.",
+    "Custom software development, web development and UX design, digital marketing, branding, SEO and IT support from NovaLink Innovations in Melbourne, Australia.",
   path: "/services",
 });
 
@@ -37,7 +37,7 @@ export default function ServicesPage() {
         crumb="Services"
         label="Services"
         lines={["Technology expertise from", { text: "strategy to launch.", className: "text-blue" }]}
-        intro="Four connected disciplines, delivered by one team so nothing gets lost between strategy, design and engineering."
+        intro="Five connected disciplines, delivered by one team so nothing gets lost between strategy, design and engineering."
       >
         <nav aria-label="Jump to service" className="mt-12 flex flex-wrap gap-2">
           {services.map((s) => (
